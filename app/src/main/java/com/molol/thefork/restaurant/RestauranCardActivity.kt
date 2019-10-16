@@ -5,8 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import com.molol.thefork.core.restaurant.domain.Restaurant
-import com.molol.thefork.restaurant.ui.restaurancard.RestauranCardFragment
+import com.molol.thefork.restaurant.ui.presentation.RestauranCardFragment
 
 class RestauranCardActivity : AppCompatActivity() {
 

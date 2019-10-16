@@ -1,4 +1,4 @@
-package com.molol.thefork.restaurant.ui.restaurancard
+package com.molol.thefork.restaurant.ui.presentation
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
