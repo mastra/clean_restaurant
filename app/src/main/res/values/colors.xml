@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#0E2014</color>
     <color name="colorAccent">#6C9544</color>
     <color name="transparent">#00000000</color>
+    <color name="restoName">#FFFFFF</color>
+    <color name="colorSeparator">#EFEFEF</color>
 </resources>

@@ -9,16 +9,20 @@ data class RestaurantData(
     val idRestaurant: Int,
     val name: String,
     @Json(name="card_price")
-    val cardPrice: Float,
+    val cardPrice: String,
     @Json(name="rate_count")
     val rateCount: Int,
+    @Json(name="avg_rate")
+    val avgRate: String?,
+
     @Json(name="trip_advisor_avg_rating")
-    val tripAdvisorAvgRating: Float,
+    val tripAdvisorAvgRating: String,
     @Json(name="trip_advisor_review_count")
-    val tripAdvisorReviewCount: Float,
+    val tripAdvisorReviewCount: Int,
+
     @Json(name="currency_code")
     val currencyCode: String,
-    val speciality: String,
+
     @Json(name = "card_dessert_1")
     val cardDessert1: String,
     @Json(name = "card_dessert_2")
@@ -61,7 +65,7 @@ data class RestaurantData(
     val picsMain: PicsMain,
     @Json(name = "pics_diaporama")
     val picsDiaporama: List<PicsDiaporama>,
-
+    val speciality: String,
     @Json(name = "chef_name")
     val chefName: String?
 

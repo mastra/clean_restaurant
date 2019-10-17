@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">restaurant</string>
+    <string name="avg_price" translatable="false">Prix moyen %1s%2s</string>
+    <string name="rateMax">/10</string>
+    <string name="count">%d avis</string>
+</resources>

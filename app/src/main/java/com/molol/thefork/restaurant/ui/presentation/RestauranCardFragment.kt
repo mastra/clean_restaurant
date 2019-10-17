@@ -7,8 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import com.molol.thefork.restaurant.R
 import com.molol.thefork.restaurant.RestauranCardActivity
+import kotlinx.android.synthetic.main.restauran_card_fragment.*
 
 class RestauranCardFragment : Fragment() {
 
@@ -44,6 +46,12 @@ class RestauranCardFragment : Fragment() {
         binding.setLifecycleOwner(this)
 
         viewModel.show(restaurantId)
+
+        viewModel.restaurant.observe(this, Observer {newRestaurant ->
+            binding.imageSlider.setSliderAdapter(DiaporamaSliderAdapter(context!!, newRestaurant.picDiaporama));
+
+        })
+
 
         return binding.root
     }
