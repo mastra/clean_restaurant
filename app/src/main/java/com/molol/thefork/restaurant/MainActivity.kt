@@ -2,10 +2,6 @@ package com.molol.thefork.restaurant
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import com.molol.thefork.core.restaurant.domain.Restaurant
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button.setOnClickListener {
+        buttonReserve.setOnClickListener {
 
             val intent = RestauranCardActivity.newIntent(this, 40370 )
             startActivity(intent)

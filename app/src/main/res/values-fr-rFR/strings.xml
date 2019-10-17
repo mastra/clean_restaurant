@@ -4,4 +4,12 @@
     <string name="avg_price" translatable="false">Prix moyen %1s%2s</string>
     <string name="rateMax">/10</string>
     <string name="count">%d avis</string>
+    <string name="cart_title">Carte du restaurant</string>
+
+    <string name="button_reserve">Reserve ⋅ jusqu\'à -20%</string>
+
+    <string name="entree_title">Entrée</string>
+    <string name="main_title">Plat</string>
+    <string name="dessert_title">Dessert</string>
+
 </resources>

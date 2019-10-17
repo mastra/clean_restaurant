@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="CarteMenuItemView">
+        <attr name="carte_menu_item_text" format="string" />
+        <attr name="carte_menu_item_price" format="string" />
+    </declare-styleable>
+</resources>

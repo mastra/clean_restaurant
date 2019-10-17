@@ -3,4 +3,10 @@
     <string name="avg_price">Average price %1s%2s</string>
     <string name="rateMax">/10</string>
     <string name="count">%d reviews</string>
+    <string name="cart_title">Carte du restaurant</string>
+
+    <string name="button_reserve">Reserve ⋅ Up to -20%</string>
+    <string name="entree_title">Entree</string>
+    <string name="main_title">Main</string>
+    <string name="dessert_title">Dessert</string>
 </resources>

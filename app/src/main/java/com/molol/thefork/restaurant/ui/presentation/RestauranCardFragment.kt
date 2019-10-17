@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.molol.thefork.restaurant.R
@@ -49,6 +50,28 @@ class RestauranCardFragment : Fragment() {
 
         viewModel.restaurant.observe(this, Observer {newRestaurant ->
             binding.imageSlider.setSliderAdapter(DiaporamaSliderAdapter(context!!, newRestaurant.picDiaporama));
+
+            newRestaurant.startMenu?.forEach {
+                val menuItemView = CarteMenuItemView(context!!)
+                menuItemView.text = it.name
+                menuItemView.price = it.price.str + it.price.currencySymbol
+                binding.startLayout.addView( menuItemView)
+            }
+            //binding.restaurancard.requestLayout()
+
+            newRestaurant.mainMenu?.forEach {
+                val menuItemView = CarteMenuItemView(context!!)
+                menuItemView.text = it.name
+                menuItemView.price = it.price.str + it.price.currencySymbol
+                binding.mainLayout.addView( menuItemView)
+            }
+            newRestaurant.dessertMenu?.forEach {
+                val menuItemView = CarteMenuItemView(context!!)
+                menuItemView.text = it.name
+                menuItemView.price = it.price.str + it.price.currencySymbol
+                binding.dessertLayout.addView( menuItemView)
+            }
+
 
         })
 

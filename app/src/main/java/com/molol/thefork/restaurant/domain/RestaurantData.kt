@@ -43,23 +43,23 @@ data class RestaurantData(
     val cardStart3: String,
 
     @Json(name = "price_card_dessert_1")
-    val priceCardDessert1: Float,
+    val priceCardDessert1: String,
     @Json(name = "price_card_dessert_2")
-    val priceCardDessert2: Float,
+    val priceCardDessert2: String,
     @Json(name = "price_card_dessert_3")
-    val priceCardDessert3: Float,
+    val priceCardDessert3: String,
     @Json(name = "price_card_main_1")
-    val priceCardMain1: Float,
+    val priceCardMain1: String,
     @Json(name = "price_card_main_2")
-    val priceCardMain2: Float,
+    val priceCardMain2: String,
     @Json(name = "price_card_main_3")
-    val priceCardMain3: Float,
+    val priceCardMain3: String,
     @Json(name = "price_card_start_1")
-    val priceCardStart1: Float,
+    val priceCardStart1: String,
     @Json(name = "price_card_start_2")
-    val priceCardStart2: Float,
+    val priceCardStart2: String,
     @Json(name = "price_card_start_3")
-    val priceCardStart3: Float,
+    val priceCardStart3: String,
 
     @Json(name = "pics_main")
     val picsMain: PicsMain,

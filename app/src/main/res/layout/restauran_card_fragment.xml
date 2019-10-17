@@ -6,6 +6,12 @@
         <variable name="restauranCardViewModel" type="com.molol.thefork.restaurant.ui.presentation.RestauranCardViewModel"/>
     </data>
 
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
 
             android:id="@+id/restaurancard"
@@ -43,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:text="@{ restauranCardViewModel.restaurant.speciality}"
+                android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@+id/imageSlider" />
@@ -81,6 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:text="@string/rateMax"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/avgMax"
                 app:layout_constraintBottom_toBottomOf="@+id/textViewCategory"
                 app:layout_constraintEnd_toStartOf="@+id/guideline3" />
@@ -98,6 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:text="8.8"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/avg_font_size"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/textViewRateMax"
@@ -126,5 +135,129 @@
 
         </FrameLayout>
 
+
+        <TextView
+                android:id="@+id/textViewCarte"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_weight="1"
+                android:text="@string/cart_title"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/separator" />
+
+        <LinearLayout
+                android:id="@+id/startLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCarte">
+
+            <TextView
+                    android:id="@+id/textViewEntreeTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/entree_title" />
+
+        </LinearLayout>
+
+        <FrameLayout
+                android:id="@+id/separator1"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/colorSeparator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/startLayout">
+        </FrameLayout>
+
+        <LinearLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/separator1">
+
+            <TextView
+                    android:id="@+id/textViewMainTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/main_title" />
+
+        </LinearLayout>
+
+        <FrameLayout
+                android:id="@+id/separator2"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/colorSeparator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mainLayout">
+        </FrameLayout>
+
+        <LinearLayout
+                android:id="@+id/dessertLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/separator2">
+
+            <TextView
+                    android:id="@+id/textViewDesertTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dessert_title" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+                android:id="@+id/separator3"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/colorSeparator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dessertLayout">
+        </FrameLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+        <Button
+                android:id="@+id/buttonReserve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
+                android:layout_marginEnd="@dimen/button_margin"
+                android:layout_marginBottom="@dimen/button_margin"
+                android:background="@color/colorAccent"
+                android:text="@string/button_reserve"
+                android:textColor="@android:color/background_light"></Button>
+    </RelativeLayout>
 </layout>
