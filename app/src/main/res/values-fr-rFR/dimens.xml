@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="margin_slider">32dp</dimen>
+    <dimen name="margin_bottom_slider">86dp</dimen>
     <dimen name="avg_font_size">26sp</dimen>
     <dimen name="avgMax">20sp</dimen>
     <dimen name="menu_margin">32dp</dimen>
     <dimen name="button_margin">32dp</dimen>
+    <dimen name="big_rate_size">60sp</dimen>
+    <dimen name="rate_margin">80dp</dimen>
 </resources>

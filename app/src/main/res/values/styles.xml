@@ -24,4 +24,9 @@
 
         <item name="background">@color/transparent</item>
     </style>
+    <style name="TPRating" parent="@android:style/Widget.RatingBar">
+        <item name="android:minHeight">40dip</item>
+        <item name="android:minWidth">40dip</item>
+        <item name="android:progressDrawable">@drawable/rating_bar_tp</item>
+    </style>
 </resources>

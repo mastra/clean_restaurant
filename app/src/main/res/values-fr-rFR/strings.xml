@@ -11,5 +11,12 @@
     <string name="entree_title">Entrée</string>
     <string name="main_title">Plat</string>
     <string name="dessert_title">Dessert</string>
+    <string name="all_carte">Voir la carte et les menus</string>
+    <string name="notes_reviews"><![CDATA[Notes & Avis]]></string>
+    <string name="under_10">/10</string>
+    <string name="table_excepcionale">Table excepcionale</string>
+    <string name="based_on">Basé sur %d notes</string>
+    <string name="all_notes">Voir tous les avis</string>
+    <string name="write_review">Écrire un avis</string>
 
 </resources>

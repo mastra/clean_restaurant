@@ -6,4 +6,6 @@
     <dimen name="avgMax">20sp</dimen>
     <dimen name="menu_margin">32dp</dimen>
     <dimen name="button_margin">32dp</dimen>
+    <dimen name="big_rate_size">60sp</dimen>
+    <dimen name="rate_margin">80dp</dimen>
 </resources>
