@@ -9,14 +9,14 @@ data class RestaurantData(
     val idRestaurant: Int,
     val name: String,
     @Json(name="card_price")
-    val cardPrice: String,
+    val cardPrice: Float,
     @Json(name="rate_count")
     val rateCount: Int,
     @Json(name="avg_rate")
-    val avgRate: String?,
+    val avgRate: Float?,
 
     @Json(name="trip_advisor_avg_rating")
-    val tripAdvisorAvgRating: String,
+    val tripAdvisorAvgRating: Float,
     @Json(name="trip_advisor_review_count")
     val tripAdvisorReviewCount: Int,
 
@@ -43,23 +43,23 @@ data class RestaurantData(
     val cardStart3: String,
 
     @Json(name = "price_card_dessert_1")
-    val priceCardDessert1: String,
+    val priceCardDessert1: Float,
     @Json(name = "price_card_dessert_2")
-    val priceCardDessert2: String,
+    val priceCardDessert2: Float,
     @Json(name = "price_card_dessert_3")
-    val priceCardDessert3: String,
+    val priceCardDessert3: Float,
     @Json(name = "price_card_main_1")
-    val priceCardMain1: String,
+    val priceCardMain1: Float,
     @Json(name = "price_card_main_2")
-    val priceCardMain2: String,
+    val priceCardMain2: Float,
     @Json(name = "price_card_main_3")
-    val priceCardMain3: String,
+    val priceCardMain3: Float,
     @Json(name = "price_card_start_1")
-    val priceCardStart1: String,
+    val priceCardStart1: Float,
     @Json(name = "price_card_start_2")
-    val priceCardStart2: String,
+    val priceCardStart2: Float,
     @Json(name = "price_card_start_3")
-    val priceCardStart3: String,
+    val priceCardStart3: Float,
 
     @Json(name = "pics_main")
     val picsMain: PicsMain,

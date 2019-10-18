@@ -31,7 +31,9 @@ fun RestaurantData.toRestaurant() : Restaurant {
         add(MenuItem(cardDessert2, Price(priceCardDessert2, currencyCode, currencySymbol)))
         add(MenuItem(cardDessert3, Price(priceCardDessert3, currencyCode, currencySymbol)))
     }
-    val avg = avgRate ?: "8.3"
+    // The restaurant id given doesn't have an avgRate, so I will assign some value just to show something
+    val avg = avgRate ?: 8.1f
+
     return Restaurant( idRestaurant, name, picsMain.x270, picList, avgPrice, speciality, rateCount, avg,
         tripAdvisorAvgRating, tripAdvisorReviewCount,
         startMenu, mainMenu, dessertMenu

@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer
 import com.molol.thefork.restaurant.R
 import com.molol.thefork.restaurant.RestauranCardActivity
 import kotlinx.android.synthetic.main.restauran_card_fragment.*
+import java.text.DecimalFormat
 
 class RestauranCardFragment : Fragment() {
 
@@ -72,7 +73,11 @@ class RestauranCardFragment : Fragment() {
                 binding.dessertLayout.addView( menuItemView)
             }
 
+            binding.ratingBar.rating = newRestaurant.tripAdvisorRate
 
+            val df = DecimalFormat.getInstance()
+            binding.textViewRate.text = df.format(newRestaurant.avgRate)
+            binding.textViewAvisRate.text = df.format(newRestaurant.avgRate)
         })
 
 

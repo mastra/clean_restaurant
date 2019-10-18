@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">restaurant</string>
+    <string name="avg_price">Average price %1s%2s</string>
+    <string name="rateMax">/10</string>
+    <string name="count">%d reviews</string>
+    <string name="cart_title">Carte du restaurant</string>
+
+    <string name="button_reserve">Reserve ⋅ Up to -20%</string>
+    <string name="entree_title">Entree</string>
+    <string name="main_title">Main</string>
+    <string name="dessert_title">Dessert</string>
+    <string name="all_carte">Sell the full menu</string>
+    <string name="notes_reviews"><![CDATA[Notes & Reviews]]></string>
+    <string name="under_10">/10</string>
+    <string name="table_excepcionale">Table excepcionale</string>
+    <string name="based_on">Based on %d notes</string>
+    <string name="all_notes">See all notes</string>
+    <string name="write_review">Write a review</string>
+    <string name="rate_count">%d reviews</string>
+    <string name="see_all">See all</string>
+    <string name="action_fav">Fav</string>
+    <string name="action_search">Search</string>
+</resources>
