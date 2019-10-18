@@ -296,6 +296,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/rate_margin"
+                        android:fontFamily="@font/ebgaramond_regular"
                         android:text="@string/table_excepcionale"
                         android:textSize="18sp"
                         android:textStyle="italic"
@@ -412,6 +413,22 @@
                 android:background="@color/colorAccent"
                 android:text="@string/button_reserve"
                 android:textColor="@android:color/background_light"></Button>
+
+        <FrameLayout
+                android:id="@+id/loadingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorLoadingBackground">
+
+            <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="140dp"
+                    android:indeterminate="true"
+                    android:visibility="visible" />
+        </FrameLayout>
 
 
     </RelativeLayout>

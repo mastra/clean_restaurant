@@ -1,6 +1,7 @@
 package com.molol.thefork.restaurant.framework
 
 import android.util.Log
+import com.molol.thefork.core.restaurant.data.RestaurantDataSource
 import com.molol.thefork.core.restaurant.domain.Restaurant
 import com.molol.thefork.restaurant.domain.RestaurantData
 import com.molol.thefork.restaurant.domain.RestaurantResponse
@@ -12,11 +13,11 @@ import java.net.URL
 const val API_KEY = "IPHONEPRODEDCRFV"
 const val METHOD = "restaurant_get_info"
 
-class RestaurantRepository {
+class APIRestaurantDataSource : RestaurantDataSource {
 
 
-    fun getRestaurant(id :Int) : Restaurant? {
-        val url = "https://api.lafourchette.com/api?%20key=$API_KEY&method=$METHOD&id_restaurant=$id"
+    override fun get(restaurantId :Int) : Restaurant? {
+        val url = "https://api.lafourchette.com/api?%20key=$API_KEY&method=$METHOD&id_restaurant=$restaurantId"
         //val str = URL(url).readText()
         val str = getStr()
         val restoData = RestaurantJson.parse(str)

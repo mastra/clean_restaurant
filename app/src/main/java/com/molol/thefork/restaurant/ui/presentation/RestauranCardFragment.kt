@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer
 import com.molol.thefork.restaurant.R
 import com.molol.thefork.restaurant.RestauranCardActivity
 import kotlinx.android.synthetic.main.restauran_card_fragment.*
+import org.koin.android.viewmodel.ext.android.viewModel
 import java.text.DecimalFormat
 
 class RestauranCardFragment : Fragment() {
@@ -29,7 +30,9 @@ class RestauranCardFragment : Fragment() {
         }
     }
 
-    private lateinit var viewModel: RestauranCardViewModel
+    //private lateinit var viewModel: RestauranCardViewModel
+    val restaurantViewModel: RestauranCardViewModel by viewModel()
+
     private lateinit var binding: com.molol.thefork.restaurant.databinding.RestauranCardFragmentBinding
 
     override fun onCreateView(
@@ -38,18 +41,18 @@ class RestauranCardFragment : Fragment() {
     ): View {
 
         val restaurantId = arguments!!.getInt(RestauranCardActivity.RESTAURANT_ID)
-        viewModel = ViewModelProviders.of(this).get(RestauranCardViewModel::class.java)
+        //viewModel = ViewModelProviders.of(this).get(RestauranCardViewModel::class.java)
 
 
         binding = DataBindingUtil.inflate(inflater, R.layout.restauran_card_fragment, container, false)
 
-        binding.restauranCardViewModel = viewModel
+        binding.restauranCardViewModel = restaurantViewModel
 
         binding.setLifecycleOwner(this)
 
-        viewModel.show(restaurantId)
+        restaurantViewModel.show(restaurantId)
 
-        viewModel.restaurant.observe(this, Observer {newRestaurant ->
+        restaurantViewModel.restaurant.observe(this, Observer {newRestaurant ->
             binding.imageSlider.setSliderAdapter(DiaporamaSliderAdapter(context!!, newRestaurant.picDiaporama));
 
             newRestaurant.startMenu?.forEach {
@@ -80,7 +83,11 @@ class RestauranCardFragment : Fragment() {
             binding.textViewAvisRate.text = df.format(newRestaurant.avgRate)
         })
 
-
+        restaurantViewModel.loading.observe(this, Observer { newLoading ->
+            binding.loadingLayout.visibility = if (newLoading) View.VISIBLE else View.GONE
+            binding.progressBar.visibility = if (newLoading) View.VISIBLE else View.GONE
+            //binding.progressBar.set
+        })
         return binding.root
     }
 

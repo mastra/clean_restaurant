@@ -11,7 +11,6 @@ object  RestaurantJson {
             .add(KotlinJsonAdapterFactory()).build()
         val jsonAdapter = moshi.adapter<RestaurantResponse>(RestaurantResponse::class.java!!)
 
-        //val json = jsonAdapter.toJson(blackjackHand)
         val response = jsonAdapter.fromJson(strJson)
         return response?.restaurant
     }

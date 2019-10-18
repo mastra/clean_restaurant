@@ -4,15 +4,15 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.molol.thefork.core.restaurant.data.RestaurantRepository
 import com.molol.thefork.core.restaurant.domain.Restaurant
-import com.molol.thefork.restaurant.framework.RestaurantRepository
+import com.molol.thefork.core.restaurant.interactors.OpenRestaurant
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class RestauranCardViewModel : ViewModel() {
+class RestauranCardViewModel(val openRestaurant: OpenRestaurant) : ViewModel() {
 
-    val repository = RestaurantRepository()
 
     private val _title = MutableLiveData<String>()
     val title: LiveData<String>
@@ -22,15 +22,27 @@ class RestauranCardViewModel : ViewModel() {
     val restaurant : LiveData<Restaurant>
         get() = _restaurant
 
-    fun show(restautantId : Int) {
+    private val _loading = MutableLiveData<Boolean>()
+    val loading : LiveData<Boolean>
+        get() = _loading
 
+    fun show(restautantId : Int) {
+        showLoading()
         viewModelScope.launch {
             _restaurant.value = withContext(Dispatchers.IO) {
-                repository.getRestaurant(restautantId)
+                openRestaurant(restautantId)
             }
+            hideLoading()
         }
 
-        //_title.value = "RestaurantData $restautantId"
-        //_restaurant.value = Restaurant(restautantId,"RestaurantData $restautantId" )
     }
+
+    fun showLoading() {
+        _loading.value = true
+    }
+
+    fun hideLoading() {
+        _loading.value = false
+    }
+
 }
