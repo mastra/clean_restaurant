@@ -400,7 +400,7 @@
         </ScrollView>
 
         <Button
-                android:id="@+id/buttonReserve"
+                android:id="@+id/button40370"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -414,21 +414,28 @@
                 android:text="@string/button_reserve"
                 android:textColor="@android:color/background_light"></Button>
 
-        <FrameLayout
+        <RelativeLayout
                 android:id="@+id/loadingLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorLoadingBackground">
+                android:background="@color/colorLoadingBackground"
+                android:visibility="visible">
 
             <ProgressBar
                     android:id="@+id/progressBar"
-                    style="?android:attr/progressBarStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="140dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginTop="140dp"
+                    android:layout_marginEnd="140dp"
+                    android:layout_marginBottom="140dp"
                     android:indeterminate="true"
+                    android:indeterminateBehavior="repeat"
+                    android:max="10"
+                    android:progress="0"
                     android:visibility="visible" />
-        </FrameLayout>
+        </RelativeLayout>
 
 
     </RelativeLayout>

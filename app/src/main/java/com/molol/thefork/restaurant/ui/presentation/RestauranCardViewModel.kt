@@ -27,7 +27,7 @@ class RestauranCardViewModel(val openRestaurant: OpenRestaurant) : ViewModel() {
         get() = _loading
 
     fun show(restautantId : Int) {
-        showLoading()
+
         viewModelScope.launch {
             _restaurant.value = withContext(Dispatchers.IO) {
                 openRestaurant(restautantId)

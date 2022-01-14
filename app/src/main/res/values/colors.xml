@@ -6,5 +6,5 @@
     <color name="transparent">#00000000</color>
     <color name="restoName">#FFFFFF</color>
     <color name="colorSeparator">#EFEFEF</color>
-    <color name="colorLoadingBackground">#88FFFF00</color>
+    <color name="colorLoadingBackground">#88FFFFFF</color>
 </resources>

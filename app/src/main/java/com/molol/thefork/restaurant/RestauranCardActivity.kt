@@ -7,13 +7,14 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.molol.thefork.restaurant.ui.presentation.RestauranCardFragment
+import androidx.core.app.NavUtils
 
 class RestauranCardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.restauran_card_activity)
-        val restaurantId = intent.extras?.getInt( RESTAURANT_ID) ?: 0
+        val restaurantId = intent.extras?.getInt( RESTAURANT_ID) ?: 40370
         if (savedInstanceState == null) {
 
             supportFragmentManager.beginTransaction()
@@ -33,7 +34,9 @@ class RestauranCardActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
-                finish()
+                val intent = Intent(this, MainActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent)
                 return true
             }
         }

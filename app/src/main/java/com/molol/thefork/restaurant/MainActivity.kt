@@ -10,12 +10,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        buttonReserve.setOnClickListener {
-
-            val intent = RestauranCardActivity.newIntent(this, 40370 )
-            startActivity(intent)
+        button40370.setOnClickListener {
+            openCard(40370)
         }
+        button14163.setOnClickListener {
+            openCard(14163)
+        }
+        button16404.setOnClickListener {
+            openCard(16404)
+        }
+
     }
 
 
+    fun openCard(restaurantId:Int) {
+        val intent = RestauranCardActivity.newIntent(this, restaurantId )
+        startActivity(intent)
+    }
 }

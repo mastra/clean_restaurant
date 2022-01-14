@@ -50,9 +50,9 @@ class RestauranCardFragment : Fragment() {
 
         binding.setLifecycleOwner(this)
 
-        restaurantViewModel.show(restaurantId)
 
         restaurantViewModel.restaurant.observe(this, Observer {newRestaurant ->
+
             binding.imageSlider.setSliderAdapter(DiaporamaSliderAdapter(context!!, newRestaurant.picDiaporama));
 
             newRestaurant.startMenu?.forEach {
@@ -88,6 +88,11 @@ class RestauranCardFragment : Fragment() {
             binding.progressBar.visibility = if (newLoading) View.VISIBLE else View.GONE
             //binding.progressBar.set
         })
+
+
+        restaurantViewModel.showLoading()
+        restaurantViewModel.show(restaurantId)
+
         return binding.root
     }
 
